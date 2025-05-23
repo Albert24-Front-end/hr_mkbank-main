@@ -1,0 +1,62 @@
+<script setup>
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
+import { ChevronDownIcon } from '@heroicons/vue/20/solid'
+
+defineProps({
+  number: [String, Number],
+  heading: String,
+})
+</script>
+
+<template>
+  <div class="justify-self-center">
+    <Menu as="div" class="relative inline-block text-left w-full">
+      <div>
+        <MenuButton
+          class="inline-flex min-w-full justify-between items-center gap-x-5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50"
+        >
+          <div class="flex items-center gap-2.5 text-xl">
+            <div class="px-2.5 py-1 rounded-md bg-gray-200">{{ number }}</div>
+            {{ heading }}
+          </div>
+          <ChevronDownIcon class="-mr-1 size-5 text-gray-400" aria-hidden="true" />
+        </MenuButton>
+      </div>
+
+      <transition
+        enter-active-class="transition ease-out duration-100"
+        enter-from-class="transform opacity-0 scale-95"
+        enter-to-class="transform opacity-100 scale-100"
+        leave-active-class="transition ease-in duration-75"
+        leave-from-class="transform opacity-100 scale-100"
+        leave-to-class="transform opacity-0 scale-95"
+      >
+        <MenuItems
+          class="absolute right-0 z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden"
+        >
+          <div class="py-1">
+            <MenuItem v-slot="{ active }">
+              <a
+                href="#"
+                :class="[
+                  active ? 'bg-gray-100 text-gray-900 outline-hidden' : 'text-gray-700',
+                  'block px-4 py-2 text-sm',
+                ]"
+              >
+                <p class="font-semibold">
+                  Мы не просто нанимаем сотрудников — мы формируем будущее банковской отрасли страны
+                </p>
+                <p>
+                  В MKBANK Bы становитесь частью Kоманды, которая внедряет инновации, трансформирует
+                  процессы и внедряет цифровые решения. Каждый проект, каждый вклад сотрудника
+                  влияет на устойчивое развитие не только Банка, но и финансовой системы Узбекистана
+                </p>
+                <p class="font-semibold">Мы инвестируем в будущее — начиная с людей</p>
+              </a>
+            </MenuItem>
+          </div>
+        </MenuItems>
+      </transition>
+    </Menu>
+  </div>
+</template>

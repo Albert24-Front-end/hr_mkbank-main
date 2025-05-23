@@ -1,0 +1,58 @@
+{
+    
+    "buttons": {
+        "bank_info": "Bank haqida",
+        "career": "Karyera",
+        "vacancies": "Ish o'rinlari",
+        "contacts": "Kontaktlar",
+        "join_us": "Jamoaning bir qismi bo'lish",
+        "send_email": "Jo'natish"
+    },
+    "headings": {
+        "hero_heading": "Qadriyatlar birlashtiradi",
+        "why_we_heading": "Nega aynan biz bilan ishlash kerak ",
+        "advantages_heading": "Nega aynan Biz?",
+        "recruiting_heading": "Rekruting bosqichlari:"
+    },
+    "dropdown_headings": {
+        "first": "Bugun biz ertani yaratmoqdamiz",
+        "second": "Biz iste’dodlarni rivojlantiramiz",
+        "third": "Biz nafaqat ish beruvchi, balki hamkormiz"
+    },
+    "first_dropdown_text": {
+        "first": "Biz shunchaki xodim yollamaymiz — biz bank sohasining kelajagini shakllantiramiz",
+        "second": "MKBANKda siz innovatsiyalarni joriy etuvchi, jarayonlarni transformatsiya qiluvchi va raqamli yechimlarni amalga oshiruvchi jamoaning muhim a’zosiga aylanishingiz mumkin. Har bir loyiha, har bir xodim hissasi nafaqat bank, balki butun O‘zbekiston moliya tizimining barqaror rivojiga hissa qo‘shadi",
+        "third": "Biz kelajakka sarmoya kiritamiz — avvalo insonlarga investitsiya qilamiz"
+    },
+    "second_dropdown_text": {
+        "first": "Karyera o‘sishi — bu abstrakt va’da emas, balki aniq belgilangan va bosqichma-bosqich yo‘l",
+        "second": "Birinchi kundan boshlab o‘qitish va mentorlik dasturlari. Karyera bosqichlarida soft va hard ko‘nikmalarni rivojlantirish. Ichki va tashqi kurslar, sertifikatlash hamda forumlarda ishtirok etish",
+        "third": "Biz kuchli jamoa — bu kompaniya bilan birga o‘sib boradigan jamoa, deb ishonamiz"
+    },
+    "third_dropdown_text": {
+        "first": "MKBANKda har bir xodim muhim hisoblanadi. Biz ish bilan shaxsiy hayot o‘rtasida muvozanatni ta’minlaymiz, jamoa fikrini tinglaymiz va ishonch hamda hurmat asosida korporativ madaniyatni rivojlantiramiz",
+        "second": "Biz faqat yutuqlar paytida emas, balki qiyinchiliklarda ham yoningizdamiz",
+        "third": "Siz bankda shunchaki ishlamayapsiz — uni biz bilan birga barpo etyapsiz"
+    },
+    "advantages_headings": {
+        "first": "Tez o‘sish imkoniyati",
+        "second": "Do‘stona muhit",
+        "third": "O‘qitish va o‘sish",
+        "fourth": "Barqarorlik"
+    },
+    "advantages_texts": {
+        "first": "Turli xil tarkibiy bo‘limlarda orzuingizdagi kasbni egallang va salohiyatingizni oching!",
+        "second": "Biz do‘stona muhitni qadrlaymiz va sizni birinchi kundan boshlab jamoaning muhim a'zosi sifatida his qilishingiz uchun harakat qilamiz!",
+        "third": "mkBank Academyda 50dan ortiq yo‘nalishda malaka va ko‘nikmalarni oshirish imkoniyati!",
+        "fourth": "Moliyaviy va karyeraviy o‘sish barqarorligi uyg‘unligini kashf eting!"
+    },
+    "recruiting_steps": {
+        "first": "Moliyaviy va kareraviy o‘sish barqarorligi uyg‘unligini kashf eting!",
+        "second": "Sizga qayta aloqaga chiqamiz",
+        "third": "Sizni MKBANK filialiga yoki rekruter bilan telefon orqali suhbatga taklif qilamiz",
+        "fourth": "Sizni natija haqida xabardor qilamiz"
+    },
+    "footer_logo_subtext": "Platforma Mikrokreditbank ATB tomonidan ishlab chiqilgan.",
+    "footer_divisions": "Bo‘limlar",
+    "footer_copyright": "Mikrokreditbank Aksiyadorlik Tijorat Banki 2025. Barcha huquqlar himoyalangan"
+}

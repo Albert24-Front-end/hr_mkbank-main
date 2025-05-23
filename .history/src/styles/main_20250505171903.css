@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+#app {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0rem;
+  font-weight: normal;
+}
+
+
+

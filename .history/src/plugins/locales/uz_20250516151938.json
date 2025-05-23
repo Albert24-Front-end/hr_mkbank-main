@@ -1,0 +1,56 @@
+{
+    
+    "buttons": {
+        "bank_info": "Bank haqida",
+        "career": "Karyera",
+        "vacancies": "Ish o'rinlari",
+        "contacts": "Kontaktlar",
+        "join_us": "Jamoaning bir qismi bo'lish",
+        "send_email": "Jo'natish"
+    },
+    "headings": {
+        "hero_heading": "Qadriyatlar birlashtiradi",
+        "why_we_heading": "Nega aynan biz bilan ishlash kerak ",
+        "advantages_heading": "Nega aynan Biz?",
+        "recruiting_heading": "Rekruting bosqichlari:"
+    },
+    "dropdown_headings": {
+        "first": "Bugun biz ertani yaratmoqdamiz",
+        "second": "Biz iste’dodlarni rivojlantiramiz",
+        "third": "Biz nafaqat ish beruvchi, balki hamkormiz"
+    },
+    "first_dropdown_text": {
+        "first": "Biz shunchaki xodim yollamaymiz — biz bank sohasining kelajagini shakllantiramiz",
+        "second": "В MKBANK Bы становитесь частью Kоманды, которая внедряет инновации, трансформирует процессы и внедряет цифровые решения. Каждый проект, каждый вклад сотрудника влияет на устойчивое развитие не только Банка, но и финансовой системы Узбекистана",
+        "third": "Мы инвестируем в будущее — начиная с людей"
+    },
+    "second_dropdown_text": {
+        "first": "Карьерный рост — это не абстрактное обещание, а чётко выстроенный путь",
+        "second": "Программы обучения и наставничества с первого дня. Развитие soft и hard skills на всех этапах карьеры. Внутренние и внешние курсы, сертификации, участие в форумах",
+        "third": "Мы верим, что сильная команда — это команда, которая растёт вместе с компанией"
+    },
+    "third_dropdown_text": {
+        "first": "В MKBANK важен каждый сотрудник. Мы поддерживаем баланс между работой и личной жизнью, слушаем и учитываем мнение команды, развиваем корпоративную культуру на основе доверия и уважения",
+        "second": "Мы рядом не только в достижениях, но и в вызовах",
+        "third": "Вы не просто работаете в Банке — Вы создаёте его вместе с нами"
+    },
+    "advantages_headings": {
+        "first": "Возможность быстрого роста",
+        "second": "Дружная атмосфера",
+        "third": "Обучение и развитие",
+        "fourth": "Стабильность"
+    },
+    "advantages_texts": {
+        "first": "Овладейте профессией мечты в различных подразделениях и раскройте свой потенциал!",
+        "second": "Мы ценим дружную атмосферу и стремимся, чтобы вы с первого дня чувствовали себя важным членом команды!",
+        "third": "В mkBank Academy вы можете повысить квалификацию и навыки более чем по 50 направлениям!",
+        "fourth": "Откройте для себя гармонию финансового и карьерного роста!"
+    },
+    "recruiting_steps": {
+        "first": "Этап изучения информации",
+        "second": "Мы свяжемся с вами",
+        "third": "Приглашаем на собеседование в филиал MKBANK или на телефонный звонок с рекрутером",
+        "fourth": "Уведомим вас о результате"
+    },
+    "footer_logo_subtext": "Платформа разработана АТБ «Mikrokreditbank»."
+}

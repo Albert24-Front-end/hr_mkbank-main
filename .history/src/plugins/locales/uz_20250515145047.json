@@ -1,0 +1,14 @@
+{
+    "lang": "RU",
+    "buttons": {
+        "bank_info": "Bank haqida",
+        "career": "Karyera",
+        "vacancies": "Ish o'rinlari",
+        "contacts": "Kontaktlar",
+        "join_us": "Jamoaning bir qismi bo'lish",
+        "send_email": "Jo'natish"
+    },
+    "headings": {
+        "hero_heading"
+    }
+}

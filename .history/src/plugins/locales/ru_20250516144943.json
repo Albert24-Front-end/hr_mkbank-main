@@ -1,0 +1,21 @@
+{
+    
+    "buttons": {
+        "bank_info": "О банке",
+        "career": "Карьера",
+        "vacancies": "Вакансии",
+        "contacts": "Контакты",
+        "join_us": "Станьте частью команды",
+        "send_email": "Отправить"
+    },
+    "headings": {
+        "hero_heading": "Ценности объединяют",
+        "why_we_heading": "Почему стоит работать именно с нами",
+        "advantages_heading": "Почему именно Мы?",
+        "recruiting_heading": "Этапы рекрутинга:"
+    },
+    "dropdown_headings": {
+        "first": "Сегодня мы создаём завтра",
+        "third":
+    }
+}
