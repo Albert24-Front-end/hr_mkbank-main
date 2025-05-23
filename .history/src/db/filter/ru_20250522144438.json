@@ -1,0 +1,19 @@
+{
+    "filter": {
+        "title": "Фильтр",
+        "clear": "Очистить",
+        "filtrate": "Фильтровать",
+        "labels": {
+            "direction": "Направление",
+            "location": "Локация"
+        },
+        "direction": {
+            "": "",
+        },
+        "location": {
+            "tashkent": "Ташкент",
+            "urganch": "Ургенч",
+            "khiva": "Хива"
+        }
+    }
+}

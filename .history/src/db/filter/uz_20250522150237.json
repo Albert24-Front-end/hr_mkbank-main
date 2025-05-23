@@ -1,0 +1,36 @@
+{
+  "filter": {
+    "title": "Filtr",
+    "clear": "Очистить",
+    "filtrate": "Filtr",
+    "labels": {
+      "direction": "Направление",
+      "location": "Локация"
+    },
+    "direction": {
+      "marketing": "Маркетинг",
+      "design": "Дизайн",
+      "risk_management": "Управление рисками",
+      "credit_risk_management": "Управление кредитными рисками",
+      "digital_retail_products": "Цифровые розничные продукты",
+      "credit_management": "Управление кредитами",
+      "social_credit": "Социальное кредитование",
+      "smb_development": "Развитие малого и корпоративного бизнеса",
+      "regional_projects": "Региональные проекты",
+      "bank_products_sales": "Продажи банковских продуктов",
+      "customer_service": "Обслуживание клиентов",
+      "operational activities": "Операционная деятельность",
+      "problematic_assets": "Управление проблемными активами",
+      "finances": "Финансы и бухгалтерия",
+      "digital_bank_products": "Цифровые банковские продукты",
+      "law": "Юриспруденция",
+      "management": "Менеджмент",
+      "digital_marketing": "Цифровой маркетинг"
+    },
+    "location": {
+      "tashkent": "Ташкент",
+      "urganch": "Ургенч",
+      "khiva": "Хива"
+    }
+  }
+}

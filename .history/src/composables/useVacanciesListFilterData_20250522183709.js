@@ -1,0 +1,28 @@
+import {ref} from 'vue'
+import { useI18n } from 'vue-i18n'
+import ru from '@/db/filter/ru.json'
+import uz from '@/db/filter/uz.json'
+
+
+export default function useVacanciesListFilterData() {
+    const { t, locale } = useI18n()
+    const direction = ru.direction;
+    const directions = ref(
+        // Object.keys(direction).map(key=>({
+        //     name: key, text: () => t(`filter.direction.${key}`)
+        // }))
+    )
+
+    const location = ru.location;
+    const locations = ref(
+        Object.keys(location).map(key=>({
+            name: key, text: () => t(`filter.location.${key}`)
+        }))
+    )
+
+
+    if (locale === 'ru') return '@/db/filter/ru.json'
+    if (locale === 'uz') return '@/db/filter/uz.json'
+
+    return {directions, locations}
+}
