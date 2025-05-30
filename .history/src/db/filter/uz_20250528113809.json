@@ -1,0 +1,28 @@
+{
+    "direction": {
+      "all": "Hammasi",
+      "marketing": "Marketing",
+      "design": "Dizayn",
+      "risk_management": "Risk boshqarish",
+      "credit_risk_management": "Kredit xavfini boshqarish",
+      "digital_retail_products": "Raqamli chakana mahsulotlar",
+      "credit_management": "Kreditlarni boshqarish",
+      "social_credit": "Ijtimoiy kreditlash",
+      "smb_development": "Kichik va korporativ biznesni rivojlantirish",
+      "regional_projects": "Hududiy loyihalar",
+      "bank_products_sales": "Bank mahsulotlarini sotish",
+      "customer_service": "Mijozlarga xizmat ko‘rsatish",
+      "operational activities": "Operatsion faoliyat",
+      "problematic_assets": "Muammoli aktivlarni boshqarish",
+      "finances": "Moliya va buxgalteriya",
+      "digital_bank_products": "Raqamli bank mahsulotlari",
+      "law": "Yurisprudensiya",
+      "management": "Boshqaruv",
+      "digital_marketing": "Raqamli marketing"
+    },
+    "location": {
+      "tashkent": "Toshkent",
+      "urganch": "Urganch",
+      "khiva": "Xiva"
+    }
+}
