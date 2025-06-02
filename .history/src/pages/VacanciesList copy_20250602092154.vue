@@ -9,39 +9,9 @@ import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()
 
 const searchField = ref('')
-const searchText = ref('')
 
-// const confirmedSearch = ref('')
-// const searchActivator = ref(false)
 
-// const confirmedSearch = computed(() => {
-//   let jobs = vacancies.value
-//   if(searchField.value) {
-//     jobs.filter((v)=> {return v.heading.indexOf(searchField.value) !== -1})
-//   }
-//   return jobs
-// })
 
-// const rules = computed(() => ({
-//   searchField: {
-//     minLength: helpers.withMessage('Минимальная длина: 5 символов', minLength(5))
-//   }
-// }))
-
-// const v = useVuelidate(rules, {searchField})
-
-// function confirmSearch() {
-//   v.value.$touch()
-//   if (!v.value.$invalid) {
-//     confirmedSearch.value = searchField.value.trim().toLowerCase()
-//   }
-// }
-
-// watch(searchField, ((oldValue, newVal)=>{
-//   if(newVal !== confirmedSearch.value) {
-//     confirmedSearch.value = ''
-//   }
-// }))
 const { vacancies } = useVacancyCardData()
 
 const { directions, locations } = useVacanciesListFilterData()
@@ -50,20 +20,16 @@ const selectedLocation = defineModel('selectedLocation', {default: ''})
 const selectedDirection = defineModel('selectedDirection', {default: ''})
 
 function handleSearchBtnClick() {
-  // searchActivator.value = true
-  searchText.value = searchField.value.trim().toLowerCase()
+  searchField.value = searchField.value.trim().toLowerCase()
 }
 
 const filteredVacancies = computed(() => {
-  // let jobs = vacancies.value
-  // if(searchField.value) {
-  //   jobs.filter((v)=> {return v.heading.indexOf(searchField.value) !== -1})
-  // }
+
   return vacancies ? vacancies.value.filter(v => {
     const locationMatch = !selectedLocation.value || v.location === selectedLocation.value
     const directionMatch = !selectedDirection.value || v.direction === selectedDirection.value
     // const searchMatch = !searchActivator.value || !searchField.value || v.heading.toLowerCase().includes(searchField.value.toLowerCase())
-    const titleMatch = !searchText.value || v.heading.toLowerCase().includes(searchText.value)
+    const titleMatch = !searchField.value || v.heading.toLowerCase().includes(searchField.value)
 
     return locationMatch && directionMatch && titleMatch
   }) : []
@@ -71,7 +37,7 @@ const filteredVacancies = computed(() => {
 
 watch(searchField, (newSearch)=>{
   if(!newSearch.trim()) {
-    searchText.value = ''
+    searchField.value = ''
   }
 })
 
@@ -85,7 +51,6 @@ function removeFilters() {
 watch(locale, ( newLocale, oldLocale) => {
   removeFilters();
   searchField.value = ''
-  searchText.value = ''
 })
 
 </script>

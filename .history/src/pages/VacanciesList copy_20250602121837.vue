@@ -1,5 +1,5 @@
 <script setup>
-import { computed, watch, ref } from 'vue'
+import { computed, watch, ref, onMounted } from 'vue'
 import VacancyCard from '@/components/VacancyCard.vue'
 import useVacanciesListFilterData from '@/composables/useVacanciesListFilterData'
 import useVacancyCardData from '@/composables/useVacancyCardData'
@@ -9,39 +9,10 @@ import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()
 
 const searchField = ref('')
-const searchText = ref('')
 
-// const confirmedSearch = ref('')
-// const searchActivator = ref(false)
+const filteredVacancies2 = ref([])
 
-// const confirmedSearch = computed(() => {
-//   let jobs = vacancies.value
-//   if(searchField.value) {
-//     jobs.filter((v)=> {return v.heading.indexOf(searchField.value) !== -1})
-//   }
-//   return jobs
-// })
 
-// const rules = computed(() => ({
-//   searchField: {
-//     minLength: helpers.withMessage('Минимальная длина: 5 символов', minLength(5))
-//   }
-// }))
-
-// const v = useVuelidate(rules, {searchField})
-
-// function confirmSearch() {
-//   v.value.$touch()
-//   if (!v.value.$invalid) {
-//     confirmedSearch.value = searchField.value.trim().toLowerCase()
-//   }
-// }
-
-// watch(searchField, ((oldValue, newVal)=>{
-//   if(newVal !== confirmedSearch.value) {
-//     confirmedSearch.value = ''
-//   }
-// }))
 const { vacancies } = useVacancyCardData()
 
 const { directions, locations } = useVacanciesListFilterData()
@@ -49,44 +20,42 @@ const { directions, locations } = useVacanciesListFilterData()
 const selectedLocation = defineModel('selectedLocation', {default: ''})
 const selectedDirection = defineModel('selectedDirection', {default: ''})
 
-function handleSearchBtnClick() {
-  // searchActivator.value = true
-  searchText.value = searchField.value.trim().toLowerCase()
-}
-
-const filteredVacancies = computed(() => {
-  // let jobs = vacancies.value
-  // if(searchField.value) {
-  //   jobs.filter((v)=> {return v.heading.indexOf(searchField.value) !== -1})
-  // }
-  return vacancies ? vacancies.value.filter(v => {
-    const locationMatch = !selectedLocation.value || v.location === selectedLocation.value
-    const directionMatch = !selectedDirection.value || v.direction === selectedDirection.value
-    // const searchMatch = !searchActivator.value || !searchField.value || v.heading.toLowerCase().includes(searchField.value.toLowerCase())
-    const titleMatch = !searchText.value || v.heading.toLowerCase().includes(searchText.value)
-
-    return locationMatch && directionMatch && titleMatch
-  }) : []
+onMounted(() => {
+  handleSearchBtnClick()
 })
 
+function handleSearchBtnClick() {
+  const search = searchField.value.trim().toLowerCase()
+  filteredVacancies2.value = vacancies.value.filter(v => {
+    const locationMatch = !selectedLocation.value || v.location === selectedLocation.value
+    const directionMatch = !selectedDirection.value || v.direction === selectedDirection.value
+    const titleMatch = !search || v.heading.toLowerCase().includes(search)
+
+    return locationMatch && directionMatch && titleMatch
+  }) ?? []
+}
+
 watch(searchField, (newSearch)=>{
-  if(!newSearch.trim()) {
-    searchText.value = ''
+  if(!newSearch.trim().toLowerCase()) {
+    searchField.value = ''
+    handleSearchBtnClick()
   }
+})
+
+watch([selectedDirection, selectedLocation], () => {
+  handleSearchBtnClick()
 })
 
 function removeFilters() {
  selectedDirection.value = ''
  selectedLocation.value = ''
-
-//  searchActivator.value = false
 }
 
 watch(locale, ( newLocale, oldLocale) => {
   removeFilters();
   searchField.value = ''
-  searchText.value = ''
 })
+
 
 </script>
 
@@ -143,7 +112,7 @@ watch(locale, ( newLocale, oldLocale) => {
           </div>
         </div>
         <div class="lg:col-span-6 w-full space-y-4">
-          <VacancyCard v-for="v in filteredVacancies" :key="v.id"
+          <VacancyCard v-for="v in filteredVacancies2" :key="v.id"
             :heading="v.heading"
             :city="v.location"
             :region="v.region"

@@ -10,7 +10,6 @@ const { locale } = useI18n()
 
 const searchField = ref('')
 const searchText = ref('')
-
 // const confirmedSearch = ref('')
 // const searchActivator = ref(false)
 

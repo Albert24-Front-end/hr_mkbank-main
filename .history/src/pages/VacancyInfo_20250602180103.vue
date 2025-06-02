@@ -49,7 +49,7 @@ const showLocation = computed(() =>
 )
 
 const showemailFieldError = computed(() =>
-  v.value.emailField.$dirty && v.value.emailField.$errors.length > 0
+  v.value.emailField.$dirty && v.value.emailField.$errors.length > 0 ||
 
 )
 </script>
@@ -93,7 +93,7 @@ const showemailFieldError = computed(() =>
                   :placeholder="$t('vacancy_response_form.input_placeholders.email')"
                   v-model="v.emailField.$model"
                   :error="v.emailField.$errors"
-                  @blur="v.emailField.$touch"
+                  @focus="v.emailField.$touch"
                   id="email"
                   class="w-full rounded-md outline-solid outline-1 px-2.5 py-2 bg-default text-base text-gray-500 disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none focus:ring-2 focus:ring-primary focus:border-sky-500 focus:shadow-md transition duration-200 ease-in-out"
                 />

@@ -10,7 +10,7 @@ const routes = [
     children: [
       { path: '', name: 'main', component: () => import('../pages/MainPage.vue') },
       { path: ':CatchAll(.*)', name: '404', component: () => import('../pages/404NotFound.vue') },
-      { path: 'vacancies', name: 'VacanciesList', component: () => import('../pages/VacanciesList copy.vue') },
+      { path: 'vacancies', name: 'VacanciesList', component: () => import('../pages/VacanciesListчч.vue') },
       { path: 'vacancies/:id/', name: 'VacancyInfo', component: () => import('../pages/VacancyInfo.vue') },
       { path: 'test', name: 'TestPage', component: () => import('../pages/TestPage.vue') }
     ]
