@@ -43,31 +43,31 @@ const socials = ref([
     name: 'facebook',
     link: 'https://www.facebook.com/mkbank.uz',
     iconPath: new URL('@/assets/icons/EntypoSocialFacebook.svg', import.meta.url).href,
-    // iconId: 'icon-facebook',
+    iconId: 'icon-facebook',
   },
   {
     name: 'instagram',
     link: 'https://www.instagram.com/mkbank.uz',
     iconPath: new URL('@/assets/icons/EntypoSocialInstagram.svg', import.meta.url).href,
-    // iconId: 'icon-instagram',
+    iconId: 'icon-instagram',
   },
   {
     name: 'youtube',
     link: 'https://www.youtube.com/@mkbankuz',
     iconPath: new URL('@/assets/icons/EntypoSocialYoutube.svg', import.meta.url).href,
-    // iconId: 'icon-youtube',
+    iconId: 'icon-youtube',
   },
   {
     name: 'telegram',
     link: 'https://t.me/mkbankuz',
     iconPath: new URL('@/assets/icons/ic--baseline-telegram.svg', import.meta.url).href,
-    // iconId: 'icon-telegram',
+    iconId: 'icon-telegram',
   },
 ])
 </script>
 
 <template>
-  <footer class="footer bg-[#0c5292] text-white" id="contacts">
+  <footer class="footer bg-whiye text-white" id="contacts">
     <div
       class="container w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
     >
@@ -154,10 +154,10 @@ const socials = ref([
       <div class="social-links flex gap-4 mt-4 md:mt-0">
         <span v-for="social in socials" :key="social.name">
           <a :href="social.link">
-            <img :src="social.iconPath" class="max-w-[28px]" :alt="social.name + '-icon'">
-            <!-- <svg class="w-7 h-7 fill-white hover:fill-blue-400 transition" aria-hidden="true">
-              <use :xlink:href="`/assets/social-sprite.svg#${social.iconId}`" />
-            </svg> -->
+            <!-- <img :src="social.iconPath" class="max-w-[28px]" :alt="social.name + '-icon'"> -->
+            <svg class="w-7 h-7 fill-white hover:fill-blue-400 transition" aria-hidden="true">
+              <use :xlink:href="`/assets/icons/social-sprite.svg#${social.iconId}`" />
+            </svg>
           </a>
         </span>
       </div>

@@ -42,7 +42,7 @@ onBeforeMount(() => {
   >
     <div class="flex items-center">
       <router-link to="/" aria-current="page">
-        <img src="../assets/pictures/logo_2.svg" alt="logo" class="h-10 w-auto" loading="eager" fetchpriority="high"/>
+        <!-- <img src="../assets/pictures/logo_2.svg" alt="logo" class="h-10 w-auto" loading="eager" fetchpriority="high"/> -->
       </router-link>
     </div>
     <div class="desktop-menu hidden md:flex">

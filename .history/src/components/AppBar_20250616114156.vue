@@ -41,9 +41,9 @@ onBeforeMount(() => {
     class="container w-full mx-auto px-4 sm:px-6 lg:px-8 py-4 border-b border-gray-200 flex justify-between items-center gap-2"
   >
     <div class="flex items-center">
-      <router-link to="/" aria-current="page">
-        <img src="../assets/pictures/logo_2.svg" alt="logo" class="h-10 w-auto" loading="eager" fetchpriority="high"/>
-      </router-link>
+      <router-link to="/" aria-current="page"
+        ><img src="../assets/pictures/logo_2.svg" alt="logo" class="h-10 w-auto" loading="lazy"
+      /></router-link>
     </div>
     <div class="desktop-menu hidden md:flex">
       <ul

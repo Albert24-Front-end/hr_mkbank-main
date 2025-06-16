@@ -43,25 +43,25 @@ const socials = ref([
     name: 'facebook',
     link: 'https://www.facebook.com/mkbank.uz',
     iconPath: new URL('@/assets/icons/EntypoSocialFacebook.svg', import.meta.url).href,
-    // iconId: 'icon-facebook',
+    iconId: 'icon-facebook',
   },
   {
     name: 'instagram',
     link: 'https://www.instagram.com/mkbank.uz',
     iconPath: new URL('@/assets/icons/EntypoSocialInstagram.svg', import.meta.url).href,
-    // iconId: 'icon-instagram',
+    iconId: 'icon-instagram',
   },
   {
     name: 'youtube',
     link: 'https://www.youtube.com/@mkbankuz',
     iconPath: new URL('@/assets/icons/EntypoSocialYoutube.svg', import.meta.url).href,
-    // iconId: 'icon-youtube',
+    iconId: 'icon-youtube',
   },
   {
     name: 'telegram',
     link: 'https://t.me/mkbankuz',
     iconPath: new URL('@/assets/icons/ic--baseline-telegram.svg', import.meta.url).href,
-    // iconId: 'icon-telegram',
+    iconId: 'icon-telegram',
   },
 ])
 </script>

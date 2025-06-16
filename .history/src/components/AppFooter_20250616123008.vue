@@ -36,32 +36,32 @@ const contacts = ref([
     text: () => t('footer_location'),
     iconPath: new URL('@/assets/icons/MaterialSymbolsLocationOn.svg', import.meta.url).href,
   },
-])
+]);
 
 const socials = ref([
   {
     name: 'facebook',
     link: 'https://www.facebook.com/mkbank.uz',
     iconPath: new URL('@/assets/icons/EntypoSocialFacebook.svg', import.meta.url).href,
-    // iconId: 'icon-facebook',
+    iconId: 'icon-facebook',
   },
   {
     name: 'instagram',
     link: 'https://www.instagram.com/mkbank.uz',
     iconPath: new URL('@/assets/icons/EntypoSocialInstagram.svg', import.meta.url).href,
-    // iconId: 'icon-instagram',
+    iconId: 'icon-instagram',
   },
   {
     name: 'youtube',
     link: 'https://www.youtube.com/@mkbankuz',
     iconPath: new URL('@/assets/icons/EntypoSocialYoutube.svg', import.meta.url).href,
-    // iconId: 'icon-youtube',
+    iconId: 'icon-youtube',
   },
   {
     name: 'telegram',
     link: 'https://t.me/mkbankuz',
     iconPath: new URL('@/assets/icons/ic--baseline-telegram.svg', import.meta.url).href,
-    // iconId: 'icon-telegram',
+    iconId: 'icon-telegram',
   },
 ])
 </script>
@@ -94,7 +94,7 @@ const socials = ref([
             :key="contact.name"
           >
             <span>
-              <img :src="contact.iconPath" class="max-w-[24px]" :alt="contact.name + '-icon'" />
+              <img :src="contact.iconPath" class="max-w-[24px]" :alt="contact.name + '-icon'"/>
             </span>
             <a :href="contact.link">{{ contact.text() }}</a>
           </li>
@@ -153,12 +153,9 @@ const socials = ref([
       <span class="text-center md:text-left">&copy; {{ $t('footer_copyright') }}</span>
       <div class="social-links flex gap-4 mt-4 md:mt-0">
         <span v-for="social in socials" :key="social.name">
-          <a :href="social.link">
-            <img :src="social.iconPath" class="max-w-[28px]" :alt="social.name + '-icon'">
-            <!-- <svg class="w-7 h-7 fill-white hover:fill-blue-400 transition" aria-hidden="true">
-              <use :xlink:href="`/assets/social-sprite.svg#${social.iconId}`" />
-            </svg> -->
-          </a>
+            <router-link :to="social.link">
+              <!-- <img :src="social.iconPath" class="max-w-[28px]" :alt="social.name + '-icon'"> -->
+            </router-link>
         </span>
       </div>
     </div>
